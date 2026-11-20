@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Japan Kei Truck Prices — JP Auction vs US Landed vs US Dealer Prices</title>
+<meta name="description" content="Public-data comparison of Japanese kei truck auction prices, estimated US landed costs and US dealer asking prices. Aggregates and estimates only — not live auction data.">
+<style>
+  :root { --ink:#16283f; --mut:#5a6b80; --line:#d8e0ea; --bg:#f4f6f9; --accent:#0b5cad; --good:#0d7a4a; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; color:var(--ink); background:var(--bg); }
+  header { background:var(--ink); color:#fff; padding:34px 20px 26px; }
+  header .wrap, main { max-width:1020px; margin:0 auto; }
+  header h1 { margin:0 0 8px; font-size:27px; line-height:1.25; }
+  header p { margin:0; color:#c7d5e6; font-size:15px; line-height:1.55; max-width:760px; }
+  main { padding:22px 20px 50px; }
+  h2 { font-size:20px; margin:30px 0 10px; }
+  p.lead { color:var(--mut); line-height:1.6; font-size:14.5px; }
+  .tablewrap { overflow-x:auto; background:#fff; border:1px solid var(--line); border-radius:10px; }
+  table { border-collapse:collapse; width:100%; min-width:820px; font-size:14px; }
+  th, td { padding:11px 12px; border-bottom:1px solid var(--line); text-align:right; white-space:nowrap; }
+  th { background:#eaf0f7; font-size:12.5px; color:var(--ink); }
+  td.model { text-align:left; font-weight:600; }
+  td.model .codes { display:block; font-weight:400; color:var(--mut); font-size:12px; margin-top:2px; }
+  td .usd { display:block; color:var(--mut); font-size:12px; }
+  td.spread { color:var(--good); font-weight:700; }
+  tr:last-child td { border-bottom:none; }
+  .calc { background:#fff; border:1px solid var(--line); border-radius:10px; padding:18px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:12px 18px; }
+  label { display:block; font-size:12.5px; color:var(--mut); margin-bottom:4px; }
+  input { width:100%; padding:8px 10px; font-size:15px; border:1px solid var(--line); border-radius:6px; }
+  .result { margin-top:16px; background:#eef6f1; border:1px solid #bfe0cd; border-radius:8px; padding:14px 16px; font-size:15px; line-height:1.7; }
+  .result .grand { font-size:21px; font-weight:800; color:var(--good); }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:14px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:10px; padding:14px 16px; }
+  .card h3 { margin:0 0 6px; font-size:15.5px; }
+  .card .note { margin:0 0 8px; font-size:13.5px; line-height:1.55; color:var(--ink); }
+  .card .src { margin:0; font-size:11.5px; color:var(--mut); line-height:1.5; }
+  .disclaimer { background:#fff8e6; border:1px solid #ecd9a0; border-radius:10px; padding:14px 16px; font-size:13.5px; line-height:1.65; }
+  .contact { background:#eaf0f7; border:1px solid var(--line); border-radius:10px; padding:16px; font-size:14.5px; line-height:1.65; }
+  footer { color:var(--mut); font-size:12.5px; line-height:1.6; padding:0 20px 36px; }
+  footer .wrap { max-width:1020px; margin:0 auto; }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Japan Kei Truck Prices: Auction → Landed → Resale</h1>
+    <p>What Japanese kei trucks actually sell for at auction in Japan, what it costs to land one in the US, and what US dealers ask for them — built entirely from public data. No member-only auction data, no live feeds: honest aggregates and estimates.</p>
+  </div>
+</header>
+<main>
+  <h2>The five kei trucks Americans import most</h2>
+  <p class="lead">Japanese auction averages cover 16,141 sales over 12 weeks (Aug 17 – Nov 9, 2026, 79 venues, published aggregates). The "pre-2002" column is the segment that matters for US buyers: vehicles become importable under the US 25-year rule, and 3,159 of those sales (20%) were already eligible. US dealer prices are medians of sampled dealer listings; BaT figures are medians of completed Bring a Trailer auctions. Yen converted at ¥158/$.</p>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align:left">Model</th>
+          <th>JP auction avg<br>pre-2002 (eligible)</th>
+          <th>JP auction avg<br>all years</th>
+          <th>US dealer ask<br>median</th>
+          <th>BaT sold<br>median</th>
+          <th>Est. US landed<br>cost</th>
+          <th>Indicative spread<br>(dealer − landed)</th>
+        </tr>
+      </thead>
+      <tbody>
+<tr><td class='model'>Daihatsu Hijet Truck<span class='codes'>S100P/S110P, S200P/S210P</span></td><td>¥152,000<span class='usd'>≈ $962</span></td><td>¥338,000<span class='usd'>≈ $2,139</span></td><td>$11,999</td><td>$8,450</td><td>$4,300–5,600</td><td class='spread'>$6,399–7,699</td></tr>
+<tr><td class='model'>Suzuki Carry<span class='codes'>DC51T/DD51T, DA52T/DB52T</span></td><td>¥129,000<span class='usd'>≈ $816</span></td><td>¥275,000<span class='usd'>≈ $1,741</span></td><td>$9,845</td><td>$8,000</td><td>$4,300–5,600</td><td class='spread'>$4,245–5,545</td></tr>
+<tr><td class='model'>Subaru Sambar<span class='codes'>KS3/KS4, KV3, TT1/TT2</span></td><td>¥125,000<span class='usd'>≈ $791</span></td><td>¥159,000<span class='usd'>≈ $1,006</span></td><td>$10,450</td><td>$9,900</td><td>$4,300–5,600</td><td class='spread'>$4,850–6,150</td></tr>
+<tr><td class='model'>Honda Acty Truck<span class='codes'>HA3/HA4, HA6/HA7</span></td><td>¥111,000<span class='usd'>≈ $703</span></td><td>¥150,000<span class='usd'>≈ $949</span></td><td>$9,499</td><td>—</td><td>$4,300–5,600</td><td class='spread'>$3,899–5,199</td></tr>
+<tr><td class='model'>Mitsubishi Minicab Truck<span class='codes'>U41T/U42T, DS51T(badge-eng. Carry)</span></td><td>¥79,000<span class='usd'>≈ $500</span></td><td>¥163,000<span class='usd'>≈ $1,032</span></td><td>$8,125</td><td>—</td><td>$4,000–5,200</td><td class='spread'>$2,925–4,125</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="lead">The spread is <strong>not</strong> profit: out of it come US-side reconditioning, titling, inland transport, dealer overhead and margin. It does show why the information gap exists — most US buyers cannot see the Japan side of the equation at all.</p>
+
+  <h2>Landed cost calculator</h2>
+  <p class="lead">Estimate the all-in cost of landing one pre-2002 kei truck in the US (RoRo shipping, US West Coast). Every assumption is editable — defaults are midpoints of published exporter fee schedules and documented 2026 shipments.</p>
+  <div class="calc">
+    <div class="grid">
+      <div><label>Purchase price in Japan (JPY)</label><input id="purchase" type="number" value="125000" step="1000"></div>
+      <div><label>Exchange rate (JPY per USD)</label><input id="fx" type="number" value="158" step="1"></div>
+      <div><label>Auction buying fee (JPY)</label><input id="auctionfee" type="number" value="30000" step="1000"></div>
+      <div><label>Exporter / agent fee (JPY)</label><input id="agentfee" type="number" value="80000" step="1000"></div>
+      <div><label>Japan inland transport (JPY)</label><input id="inland" type="number" value="30000" step="1000"></div>
+      <div><label>Export paperwork &amp; handling (JPY)</label><input id="paperwork" type="number" value="35000" step="1000"></div>
+      <div><label>Ocean freight, RoRo (JPY)</label><input id="freight" type="number" value="175000" step="1000"></div>
+      <div><label>US import duty (% of purchase price)</label><input id="duty" type="number" value="25" step="1"></div>
+      <div><label>US port &amp; customs broker (USD)</label><input id="port" type="number" value="750" step="10"></div>
+    </div>
+    <div class="result" id="result"></div>
+    <p class="lead" style="margin-bottom:0">Notes: light trucks are subject to the 25% US "Chicken Tax" duty; vehicles over 25 years old are exempt from the additional 2025 tariffs. Not included: US inland delivery from the port, state titling/registration, and any reconditioning.</p>
+  </div>
+
+  <h2>Model notes</h2>
+  <div class="cards">
+<div class='card'><h3>Daihatsu Hijet Truck</h3><p class='note'>Highest JP auction prices and highest US dealer asks of the five; Jumbo cab variant adds premium in US</p><p class='src'>Sources: Mirai Trading 12-wk dataset (checked 2026-11-09); carmanji dealer snapshot Mar-Nov 2026; Bring a Trailer results via carsearch dataset</p></div>
+<div class='card'><h3>Suzuki Carry</h3><p class='note'>Largest US name recognition; lowest median odometer in JP data (73000 km); tightest price spread after Hijet</p><p class='src'>Sources: Mirai Trading 12-wk dataset; carmanji dealer snapshot; Bring a Trailer results</p></div>
+<div class='card'><h3>Subaru Sambar</h3><p class='note'>Only 4-cylinder kei truck (EN07, optional supercharger); 84% 4WD share in JP sales; widest US price variance - condition is everything</p><p class='src'>Sources: Mirai Trading 12-wk dataset; carmanji dealer snapshot; Bring a Trailer results</p></div>
+<div class='card'><h3>Honda Acty Truck</h3><p class='note'>49% of JP sales under 100000 JPY (older stock); real-time 4WD; production ended 2021 so supply is finite</p><p class='src'>Sources: Mirai Trading 12-wk dataset; carmanji dealer snapshot (38-truck Minicab/Acty sampling Nov 2026)</p></div>
+<div class='card'><h3>Mitsubishi Minicab Truck</h3><p class='note'>Cheapest pre-2002 auction average of the five (79000 JPY); budget entry point in US market</p><p class='src'>Sources: Mirai Trading 12-wk dataset; carmanji dealer sampling Nov 2026</p></div>
+  </div>
+
+  <h2>Interested in importing one?</h2>
+  <div class="contact">
+    We are setting up buyer introductions to licensed Japanese export partners — you tell us the model and budget, the exporter handles purchase, export and shipping, and we handle the English/Japanese communication. If you are interested in any of the models above, reach us via our Telegram channel: <a href="https://t.me/JapanTCGGaps">t.me/JapanTCGGaps</a> — please mention "kei truck" in your message so it reaches the right desk.
+  </div>
+
+  <h2>Please read this first</h2>
+  <div class="disclaimer">
+    <strong>What this data is — and is not.</strong> All figures on this page are aggregates and estimates compiled from public sources (published auction statistics, dealer listing samples, completed auction results, published fee schedules), collected on 2026-11-20. This is <strong>not</strong> live or member-only auction market data, and it is not a quote for any specific vehicle. Prices move with condition, grade, mileage, season and exchange rates; the truck you want can cost far more or less than any average here. Nothing on this page is purchasing or investment advice. Verify any specific vehicle's price, grade sheet and total landed cost with a licensed exporter before committing funds.
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    Sources: Mirai Trading kei truck auction price report (12-week dataset, 16,141 sales, checked 2026-11-09); carmanji.com dealer price sampling and import cost guides (2026); Bring a Trailer completed auctions; JDMBUYSELL listing aggregates; published exporter fee schedules (NAVIRA Motors, Japan Car Direct, Provide Cars, Auction Agent Japan). Data collected 2026-11-20.
+  </div>
+</footer>
+<script>
+  var ids = ["purchase","fx","auctionfee","agentfee","inland","paperwork","freight","duty","port"];
+  function num(id){ var v = parseFloat(document.getElementById(id).value); return isNaN(v) ? 0 : v; }
+  function money(v){ return "$" + Math.round(v).toLocaleString("en-US"); }
+  function calc(){
+    var fx = num("fx") || 158;
+    var jpTotal = num("purchase") + num("auctionfee") + num("agentfee") + num("inland") + num("paperwork") + num("freight");
+    var jpUsd = jpTotal / fx;
+    var dutyUsd = (num("purchase") / fx) * (num("duty") / 100);
+    var total = jpUsd + dutyUsd + num("port");
+    document.getElementById("result").innerHTML =
+      "Japan-side total: ¥" + Math.round(jpTotal).toLocaleString("en-US") + " (" + money(jpUsd) + ")<br>" +
+      "US import duty: " + money(dutyUsd) + " &nbsp;·&nbsp; Port &amp; broker: " + money(num("port")) + "<br>" +
+      "<span class='grand'>Estimated landed total: " + money(total) + "</span>";
+  }
+  ids.forEach(function(id){ document.getElementById(id).addEventListener("input", calc); });
+  calc();
+</script>
+</body>
+</html>
