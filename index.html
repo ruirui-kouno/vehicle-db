@@ -90,9 +90,10 @@
       <div><label>Ocean freight, RoRo (JPY)</label><input id="freight" type="number" value="175000" step="1000"></div>
       <div><label>US import duty (% of purchase price)</label><input id="duty" type="number" value="25" step="1"></div>
       <div><label>US port &amp; customs broker (USD)</label><input id="port" type="number" value="750" step="10"></div>
+      <div><label>US inland delivery &amp; misc (USD)</label><input id="usinland" type="number" value="500" step="10"></div>
     </div>
     <div class="result" id="result"></div>
-    <p class="lead" style="margin-bottom:0">Notes: light trucks are subject to the 25% US "Chicken Tax" duty; vehicles over 25 years old are exempt from the additional 2025 tariffs. Not included: US inland delivery from the port, state titling/registration, and any reconditioning.</p>
+    <p class="lead" style="margin-bottom:0">Notes: light trucks are subject to the 25% US "Chicken Tax" duty; vehicles over 25 years old are exempt from the additional 2025 tariffs. The inland figure is a rough allowance — actual cost depends on port and destination. Not included: state titling/registration and any reconditioning.</p>
   </div>
 
   <h2>Model notes</h2>
@@ -120,7 +121,7 @@
   </div>
 </footer>
 <script>
-  var ids = ["purchase","fx","auctionfee","agentfee","inland","paperwork","freight","duty","port"];
+  var ids = ["purchase","fx","auctionfee","agentfee","inland","paperwork","freight","duty","port","usinland"];
   function num(id){ var v = parseFloat(document.getElementById(id).value); return isNaN(v) ? 0 : v; }
   function money(v){ return "$" + Math.round(v).toLocaleString("en-US"); }
   function calc(){
@@ -128,10 +129,10 @@
     var jpTotal = num("purchase") + num("auctionfee") + num("agentfee") + num("inland") + num("paperwork") + num("freight");
     var jpUsd = jpTotal / fx;
     var dutyUsd = (num("purchase") / fx) * (num("duty") / 100);
-    var total = jpUsd + dutyUsd + num("port");
+    var total = jpUsd + dutyUsd + num("port") + num("usinland");
     document.getElementById("result").innerHTML =
       "Japan-side total: ¥" + Math.round(jpTotal).toLocaleString("en-US") + " (" + money(jpUsd) + ")<br>" +
-      "US import duty: " + money(dutyUsd) + " &nbsp;·&nbsp; Port &amp; broker: " + money(num("port")) + "<br>" +
+      "US import duty: " + money(dutyUsd) + " &nbsp;·&nbsp; Port &amp; broker: " + money(num("port")) + " &nbsp;·&nbsp; Inland &amp; misc: " + money(num("usinland")) + "<br>" +
       "<span class='grand'>Estimated landed total: " + money(total) + "</span>";
   }
   ids.forEach(function(id){ document.getElementById(id).addEventListener("input", calc); });
