@@ -6,6 +6,13 @@ English static site comparing Japanese kei truck auction prices (public aggregat
 estimated US landed costs, and US dealer asking prices for the five most-imported
 kei truck models. Includes an in-browser landed-cost calculator.
 
+Also carries a "High-Value Desk" section: order-based sourcing of high-value JDM
+performance cars (GT-R R34/R33, Silvia S15, Lancer Evolution IV–VII, Supra JZA80),
+prioritising models/specifications never officially sold in the US, with published
+auction averages vs US sold medians, the order/deposit/condition-standard terms,
+and a B2B-only note for JDM-only parts. All figures are public aggregates and
+assumption-based estimates, labelled as such on the page.
+
 Data policy: public sources only. No member-only auction system data (USS / AI-NET)
 is used or republished. Figures are aggregates and estimates collected 2026-11-20,
 with sources cited on the page.
