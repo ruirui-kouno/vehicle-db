@@ -56,6 +56,15 @@
   .card h3 { margin:0 0 6px; font-size:15.5px; }
   .card .note { margin:0 0 8px; font-size:13.5px; line-height:1.55; color:var(--ink); }
   .card .src { margin:0; font-size:11.5px; color:var(--mut); line-height:1.5; }
+  .desk { background:#fff; border:2px solid var(--ink); border-radius:10px; padding:20px; }
+  .desk .tag { display:inline-block; background:var(--ink); color:#fff; font-size:12px; font-weight:700; border-radius:20px; padding:3px 10px; }
+  .desk h3 { margin:10px 0 6px; font-size:18px; }
+  .desk p, .desk li { font-size:14px; line-height:1.65; }
+  .desk ul { margin:8px 0; padding-left:20px; }
+  .desk .rules { background:#eef6f1; border:1px solid #bfe0cd; border-radius:8px; padding:12px 16px; margin-top:12px; }
+  .desk .rules p { margin:0; font-size:13.5px; }
+  td.avail { text-align:left; white-space:normal; min-width:170px; font-size:12.5px; line-height:1.5; }
+  .rare { display:inline-block; background:#fdf3e0; border:1px solid #e5c877; color:#7a5b12; font-size:11.5px; font-weight:700; border-radius:12px; padding:1px 8px; margin-bottom:3px; }
   .disclaimer { background:#fff8e6; border:1px solid #ecd9a0; border-radius:10px; padding:14px 16px; font-size:13.5px; line-height:1.65; }
   .contact { background:#eaf0f7; border:1px solid var(--line); border-radius:10px; padding:16px; font-size:14.5px; line-height:1.65; }
   footer { color:var(--mut); font-size:12.5px; line-height:1.6; padding:0 20px 36px; }
@@ -126,9 +135,82 @@
 <div class='card'><img src='images/minicab.jpg' alt='Mitsubishi Minicab Truck (U61T/U62T, rear view)' loading='lazy'><h3>Mitsubishi Minicab Truck</h3><p class='note'>Cheapest pre-2002 auction average of the five (79000 JPY); budget entry point in US market</p><p class='src'>Sources: Mirai Trading 12-wk dataset; carmanji dealer sampling Nov 2026</p></div>
   </div>
 
+  <h2>High-Value Desk: Japan-only performance cars, bought to order</h2>
+  <p class="lead">A second desk for high-value JDM performance cars, run on a completely different basis from the kei trucks above: <strong>order-based only</strong>. You name the model and your maximum price; our licensed partner in Japan bids at auction within that cap; if the car is won, it is exported to you. We hold no inventory, and neither does the partner. Priority goes to models and specifications that were <strong>never officially sold in the US</strong> — cars you simply cannot buy locally at any price.</p>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align:left">Model</th>
+          <th>JP auction avg<br>(public aggregate)</th>
+          <th>Est. US landed<br>(auction basis)</th>
+          <th>US sold median<br>(public results)</th>
+          <th>Indicative spread<br>(estimate only)</th>
+          <th style="text-align:left">Can you buy it in the US?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="model">Nissan Skyline GT-R (R34)<span class="codes">BNR34, 1999–2002 · 2002 model year becomes eligible through 2027</span></td>
+          <td>¥18,100,000<span class="usd">≈ $113,000</span></td>
+          <td>≈ $133,000</td>
+          <td>$153,000–155,000</td>
+          <td class="spread">≈ +$20,000</td>
+          <td class="avail"><span class="rare">Never sold in the US</span><br>The Skyline GT-R was never officially sold new in the US. Every US car is a personal import.</td>
+        </tr>
+        <tr>
+          <td class="model">Nissan Silvia Spec-R (S15)<span class="codes">1999–2002 · final model year becomes eligible in 2027</span></td>
+          <td>¥2,800,000–3,200,000<span class="usd">est. auction range</span></td>
+          <td>≈ $24,000–27,000</td>
+          <td>$35,294 avg</td>
+          <td class="spread">≈ +$8,000–11,000</td>
+          <td class="avail"><span class="rare">Never sold in the US</span><br>The US got the 240SX only up to the S14. The S15 was a Japan / Oceania model.</td>
+        </tr>
+        <tr>
+          <td class="model">Nissan Skyline GT-R (R33)<span class="codes">BCNR33, 1995–1998 · all years eligible</span></td>
+          <td>¥7,300,000<span class="usd">≈ $46,000</span></td>
+          <td>≈ $57,000</td>
+          <td>$65,500</td>
+          <td class="spread">≈ +$8,500</td>
+          <td class="avail"><span class="rare">Never sold in the US</span><br>Like the R34, never officially sold new in the US; all US examples are imports.</td>
+        </tr>
+        <tr>
+          <td class="model">Mitsubishi Lancer Evolution IV–VII<span class="codes">import-eligible model years only</span></td>
+          <td>below JP retail<span class="usd">auction basis</span></td>
+          <td>—</td>
+          <td>$29,125 (IV–VI)</td>
+          <td class="spread">≈ +$3,000–6,000</td>
+          <td class="avail"><span class="rare">Never sold in the US</span><br>The US Lancer Evolution started with the VIII in 2003. Generations IV–VII were never offered.</td>
+        </tr>
+        <tr>
+          <td class="model">Toyota Supra (JZA80)<span class="codes">1993–2002 · all years eligible</span></td>
+          <td>below JP retail ¥8,564,000<span class="usd">auction basis</span></td>
+          <td>$62,100–64,600<span class="usd">retail basis</span></td>
+          <td>$73,666</td>
+          <td class="spread">≈ +$7,000–9,000<span class="usd">even at JP retail</span></td>
+          <td class="avail">Sold in the US when new — <strong>not Japan-only</strong>. The Japan edge here is price and the depth of low-mileage, unmodified stock, not rarity.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="lead">How to read this table: the JP auction averages are published aggregates (Loginet, Mar–May 2025 — Japanese prices have risen since, so current spreads are likely thinner). "Est. US landed" = winning bid + Japan-side fees (roughly ¥450,000–600,000) + RoRo ocean freight (Yokohama → US West Coast, roughly $2,850–3,000) + the current 12.5% US import duty on Japanese passenger cars. US-side customs clearance, registration and reconditioning are <strong>not</strong> included. The spread is an indicative estimate under those assumptions — <strong>not a guaranteed margin</strong>, and individual cars vary widely with grade, mileage and condition.</p>
+  <div class="desk">
+    <span class="tag">How the High-Value Desk works</span>
+    <h3>Order-based only — your cap price, our partner's auction access</h3>
+    <ul>
+      <li><strong>You set the ceiling.</strong> Tell us the model, grade and your maximum all-in bid. Our partner bids only within that cap — no cap, no bid.</li>
+      <li><strong>Deposit required.</strong> A refundable buyer deposit is taken before any bid is placed. High-value cars are never bid on unsecured.</li>
+      <li><strong>Condition standard.</strong> Auction grade 4 or above, no recorded repair history (修復歴なし), with the auction sheet translated for you before you commit. Cars outside the standard are not bid on, however wide the apparent spread.</li>
+      <li><strong>Nothing is stock.</strong> Cars are bought only against a confirmed order. Timelines are months, not days — that is the honest trade-off for auction pricing.</li>
+    </ul>
+    <div class="rules">
+      <p><strong>Also Japan-only, by inquiry:</strong> Land Cruiser 70/80 with the Japanese-market diesel (never offered in the US) and the Impreza WRX STI GC8 (the US never received the GC8 WRX/STI) — handled selectively, case by case. <strong>Parts:</strong> JDM-only parts that never existed on overseas models — engines such as the SR20DET, RB26DETT and 1JZ-GTE — are handled B2B order only, and can ride along with a vehicle shipment. No retail parts sales.</p>
+    </div>
+  </div>
+
   <h2>Interested in importing one?</h2>
   <div class="contact">
-    We are setting up buyer introductions to licensed Japanese export partners — you tell us the model and budget, the exporter handles purchase, export and shipping, and we handle the English/Japanese communication. If you are interested in any of the models above, reach us via our Telegram channel: <a href="https://t.me/JapanTCGGaps">t.me/JapanTCGGaps</a> — please mention "kei truck" in your message so it reaches the right desk.
+    We are setting up buyer introductions to licensed Japanese export partners — you tell us the model and budget, the exporter handles purchase, export and shipping, and we handle the English/Japanese communication. If you are interested in any of the models above, reach us via our Telegram channel: <a href="https://t.me/JapanTCGGaps">t.me/JapanTCGGaps</a> — please mention "kei truck" in your message so it reaches the right desk. For the High-Value Desk (GT-R, Silvia, Evo, Supra and other Japan-only cars), please mention <strong>"high-value desk"</strong> and include the model and your maximum budget.
   </div>
 
   <h2>Please read this first</h2>
@@ -138,7 +220,7 @@
 </main>
 <footer>
   <div class="wrap">
-    Sources: Mirai Trading kei truck auction price report (12-week dataset, 16,141 sales, checked 2026-11-09); carmanji.com dealer price sampling and import cost guides (2026); Bring a Trailer completed auctions; JDMBUYSELL listing aggregates; published exporter fee schedules (NAVIRA Motors, Japan Car Direct, Provide Cars, Auction Agent Japan). Data collected 2026-11-20.
+    Sources: Mirai Trading kei truck auction price report (12-week dataset, 16,141 sales, checked 2026-11-09); carmanji.com dealer price sampling and import cost guides (2026); Bring a Trailer completed auctions; JDMBUYSELL listing aggregates; published exporter fee schedules (NAVIRA Motors, Japan Car Direct, Provide Cars, Auction Agent Japan). Data collected 2026-11-20. High-Value Desk: TSUISO Japan JDM price compilations (Goo-net retail medians and Bring a Trailer sold medians, Nov 2026); Loginet GT-R auction price trends (Mar–May 2025); WC Shipping Silvia S15 buying guide (CLASSIC.com US sold average, Nov 2026); US import duty on Japanese passenger cars 12.5% (from Jul 24, 2026). Yen converted at ¥160/$ for the High-Value Desk table. High-Value Desk data collected 2026-11-21.
     <br>Photos (via Wikimedia Commons): Daihatsu Hijet Truck S100 by TTTNIS, public domain; Suzuki Carry DA63T, Subaru Sambar Truck, Honda Acty Truck SDX and Mitsubishi Minicab Truck, CC0. Photos show representative examples of each model, not specific vehicles for sale.
   </div>
 </footer>
