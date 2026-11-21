@@ -11,19 +11,33 @@
 <meta property="og:url" content="https://ruirui-kouno.github.io/vehicle-db/">
 <meta name="twitter:card" content="summary">
 <link rel="canonical" href="https://ruirui-kouno.github.io/vehicle-db/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root { --ink:#16283f; --mut:#5a6b80; --line:#d8e0ea; --bg:#f4f6f9; --accent:#0b5cad; --good:#0d7a4a; }
   * { box-sizing:border-box; }
-  body { margin:0; font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; color:var(--ink); background:var(--bg); }
+  body { margin:0; font-family:'Noto Sans JP',sans-serif; color:var(--ink); background:var(--bg); }
   header { background:var(--ink); color:#fff; padding:34px 20px 26px; }
   header .wrap, main { max-width:1020px; margin:0 auto; }
-  header h1 { margin:0 0 8px; font-size:27px; line-height:1.25; }
+  header h1 { margin:0 0 8px; font-size:29px; line-height:1.25; font-family:'Archivo','Noto Sans JP',sans-serif; font-weight:800; }
   header p { margin:0; color:#c7d5e6; font-size:15px; line-height:1.55; max-width:760px; }
   main { padding:22px 20px 50px; }
-  h2 { font-size:20px; margin:30px 0 10px; }
+  h2 { font-size:20px; margin:30px 0 10px; font-family:'Archivo','Noto Sans JP',sans-serif; font-weight:700; }
+  h3 { font-family:'Archivo','Noto Sans JP',sans-serif; }
+  .spotlight { display:flex; gap:0; background:#fff; border:1px solid var(--line); border-radius:10px; overflow:hidden; margin:0 0 16px; }
+  .spotlight img { width:46%; min-height:220px; object-fit:cover; display:block; }
+  .spotlight .sbody { padding:18px 20px; display:flex; flex-direction:column; gap:8px; justify-content:center; }
+  .spotlight .tag { align-self:flex-start; background:#eef6f1; color:var(--good); border:1px solid #bfe0cd; font-size:12px; font-weight:700; border-radius:20px; padding:3px 10px; }
+  .spotlight h3 { margin:0; font-size:21px; }
+  .spotlight .nums { font-size:14.5px; line-height:1.75; font-variant-numeric:tabular-nums; }
+  .spotlight .nums .spread { color:var(--good); font-weight:800; font-size:17px; }
+  .spotlight p { margin:0; color:var(--mut); font-size:13px; line-height:1.55; }
+  @media (max-width:640px){ .spotlight{ flex-direction:column; } .spotlight img{ width:100%; height:200px; } }
+  .card img { width:100%; height:170px; object-fit:cover; border-radius:6px; display:block; margin-bottom:10px; }
   p.lead { color:var(--mut); line-height:1.6; font-size:14.5px; }
   .tablewrap { overflow-x:auto; background:#fff; border:1px solid var(--line); border-radius:10px; }
-  table { border-collapse:collapse; width:100%; min-width:820px; font-size:14px; }
+  table { border-collapse:collapse; width:100%; min-width:820px; font-size:14px; font-variant-numeric:tabular-nums; }
   th, td { padding:11px 12px; border-bottom:1px solid var(--line); text-align:right; white-space:nowrap; }
   th { background:#eaf0f7; font-size:12.5px; color:var(--ink); }
   td.model { text-align:left; font-weight:600; }
@@ -36,7 +50,7 @@
   label { display:block; font-size:12.5px; color:var(--mut); margin-bottom:4px; }
   input { width:100%; padding:8px 10px; font-size:15px; border:1px solid var(--line); border-radius:6px; }
   .result { margin-top:16px; background:#eef6f1; border:1px solid #bfe0cd; border-radius:8px; padding:14px 16px; font-size:15px; line-height:1.7; }
-  .result .grand { font-size:21px; font-weight:800; color:var(--good); }
+  .result .grand { font-size:28px; font-weight:800; color:var(--good); font-variant-numeric:tabular-nums; }
   .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:14px; }
   .card { background:#fff; border:1px solid var(--line); border-radius:10px; padding:14px 16px; }
   .card h3 { margin:0 0 6px; font-size:15.5px; }
@@ -59,6 +73,7 @@
 <main>
   <h2>The five kei trucks Americans import most</h2>
   <p class="lead">Japanese auction averages cover 16,141 sales over 12 weeks (Aug 17 – Nov 9, 2026, 79 venues, published aggregates). The "pre-2002" column is the segment that matters for US buyers: vehicles become importable under the US 25-year rule, and 3,159 of those sales (20%) were already eligible. US dealer prices are medians of sampled dealer listings; BaT figures are medians of completed Bring a Trailer auctions. Yen converted at ¥158/$.</p>
+<div class='spotlight'><img src='images/hijet.jpg' alt='Daihatsu Hijet Truck (S100)'><div class='sbody'><span class='tag'>Biggest indicative spread</span><h3>Daihatsu Hijet Truck</h3><div class='nums'>JP auction avg (pre-2002): ¥152,000 (≈ $962)<br>Est. US landed: $4,300–5,600 &nbsp;·&nbsp; US dealer median: $11,999<br><span class='spread'>Indicative spread: $6,399–7,699</span></div><p>The widest gap of the five between what the truck costs in Japan and what US dealers ask. The spread is not profit — reconditioning, titling, transport and dealer margin come out of it (see the table notes).</p></div></div>
   <div class="tablewrap">
     <table>
       <thead>
@@ -104,11 +119,11 @@
 
   <h2>Model notes</h2>
   <div class="cards">
-<div class='card'><h3>Daihatsu Hijet Truck</h3><p class='note'>Highest JP auction prices and highest US dealer asks of the five; Jumbo cab variant adds premium in US</p><p class='src'>Sources: Mirai Trading 12-wk dataset (checked 2026-11-09); carmanji dealer snapshot Mar-Nov 2026; Bring a Trailer results via carsearch dataset</p></div>
-<div class='card'><h3>Suzuki Carry</h3><p class='note'>Largest US name recognition; lowest median odometer in JP data (73000 km); tightest price spread after Hijet</p><p class='src'>Sources: Mirai Trading 12-wk dataset; carmanji dealer snapshot; Bring a Trailer results</p></div>
-<div class='card'><h3>Subaru Sambar</h3><p class='note'>Only 4-cylinder kei truck (EN07, optional supercharger); 84% 4WD share in JP sales; widest US price variance - condition is everything</p><p class='src'>Sources: Mirai Trading 12-wk dataset; carmanji dealer snapshot; Bring a Trailer results</p></div>
-<div class='card'><h3>Honda Acty Truck</h3><p class='note'>49% of JP sales under 100000 JPY (older stock); real-time 4WD; production ended 2021 so supply is finite</p><p class='src'>Sources: Mirai Trading 12-wk dataset; carmanji dealer snapshot (38-truck Minicab/Acty sampling Nov 2026)</p></div>
-<div class='card'><h3>Mitsubishi Minicab Truck</h3><p class='note'>Cheapest pre-2002 auction average of the five (79000 JPY); budget entry point in US market</p><p class='src'>Sources: Mirai Trading 12-wk dataset; carmanji dealer sampling Nov 2026</p></div>
+<div class='card'><img src='images/hijet.jpg' alt='Daihatsu Hijet Truck (S100)' loading='lazy'><h3>Daihatsu Hijet Truck</h3><p class='note'>Highest JP auction prices and highest US dealer asks of the five; Jumbo cab variant adds premium in US</p><p class='src'>Sources: Mirai Trading 12-wk dataset (checked 2026-11-09); carmanji dealer snapshot Mar-Nov 2026; Bring a Trailer results via carsearch dataset</p></div>
+<div class='card'><img src='images/carry.jpg' alt='Suzuki Carry (DA63T)' loading='lazy'><h3>Suzuki Carry</h3><p class='note'>Largest US name recognition; lowest median odometer in JP data (73000 km); tightest price spread after Hijet</p><p class='src'>Sources: Mirai Trading 12-wk dataset; carmanji dealer snapshot; Bring a Trailer results</p></div>
+<div class='card'><img src='images/sambar.jpg' alt='Subaru Sambar Truck (TT, rear view showing the cargo bed)' loading='lazy'><h3>Subaru Sambar</h3><p class='note'>Only 4-cylinder kei truck (EN07, optional supercharger); 84% 4WD share in JP sales; widest US price variance - condition is everything</p><p class='src'>Sources: Mirai Trading 12-wk dataset; carmanji dealer snapshot; Bring a Trailer results</p></div>
+<div class='card'><img src='images/acty.jpg' alt='Honda Acty Truck SDX 4WD (HA)' loading='lazy'><h3>Honda Acty Truck</h3><p class='note'>49% of JP sales under 100000 JPY (older stock); real-time 4WD; production ended 2021 so supply is finite</p><p class='src'>Sources: Mirai Trading 12-wk dataset; carmanji dealer snapshot (38-truck Minicab/Acty sampling Nov 2026)</p></div>
+<div class='card'><img src='images/minicab.jpg' alt='Mitsubishi Minicab Truck (U61T/U62T, rear view)' loading='lazy'><h3>Mitsubishi Minicab Truck</h3><p class='note'>Cheapest pre-2002 auction average of the five (79000 JPY); budget entry point in US market</p><p class='src'>Sources: Mirai Trading 12-wk dataset; carmanji dealer sampling Nov 2026</p></div>
   </div>
 
   <h2>Interested in importing one?</h2>
@@ -124,6 +139,7 @@
 <footer>
   <div class="wrap">
     Sources: Mirai Trading kei truck auction price report (12-week dataset, 16,141 sales, checked 2026-11-09); carmanji.com dealer price sampling and import cost guides (2026); Bring a Trailer completed auctions; JDMBUYSELL listing aggregates; published exporter fee schedules (NAVIRA Motors, Japan Car Direct, Provide Cars, Auction Agent Japan). Data collected 2026-11-20.
+    <br>Photos (via Wikimedia Commons): Daihatsu Hijet Truck S100 by TTTNIS, public domain; Suzuki Carry DA63T, Subaru Sambar Truck, Honda Acty Truck SDX and Mitsubishi Minicab Truck, CC0. Photos show representative examples of each model, not specific vehicles for sale.
   </div>
 </footer>
 <script>
