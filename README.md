@@ -13,6 +13,13 @@ auction averages vs US sold medians, the order/deposit/condition-standard terms,
 and a B2B-only note for JDM-only parts. All figures are public aggregates and
 assumption-based estimates, labelled as such on the page.
 
+Also carries `eligibility-2027.html` (hand-written, not generated): a month-by-month
+2027 US 25-year-rule eligibility calendar for the last 2002 builds (R34, S15, Supra,
+RX-7, Evo VII, WRX STI GDB, NSX, JZX110, kei trucks), with a mailto alert-signup
+(subject "2027 Eligibility Alert") so registrations can be counted in Gmail.
+Linked from the top of index.html and listed in sitemap.xml. Regenerate index.html
+with build_site.py, then publish both files with publish_vehicle.py.
+
 Data policy: public sources only. No member-only auction system data (USS / AI-NET)
 is used or republished. Figures are aggregates and estimates collected 2026-11-20,
 with sources cited on the page.
